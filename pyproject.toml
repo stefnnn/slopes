@@ -1,0 +1,35 @@
+
+
+
+[tool.poetry]
+name = "slopes"
+version = "0.1.0"
+description = ""
+authors = ["Stefan N <stefnnn@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+mountaineer = "^0.1.0"
+bcrypt = "^4.1.2"
+jose = "^1.0.0"
+python-jose = "^3.3.0"
+pydantic = {extras = ["email"], version = "^2.6.3"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+runserver = "slopes.cli:runserver"
+watch = "slopes.cli:watch"
+build = "slopes.cli:build"
+createdb = "slopes.cli:createdb"
+
+[tool.mypy]
+plugins = ["pydantic.mypy"]
+
+
